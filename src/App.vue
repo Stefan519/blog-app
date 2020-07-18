@@ -1,17 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <Header />
+    </div>
+    <div>
+      <BlogList v-bind:blogs="blogs"/>
+    </div>
+    <div>
+      <Sidebar v-bind:blogs="blogs"/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+import BlogList from './components/BlogList'
+import Sidebar from './components/Sidebar'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    BlogList,
+    Sidebar
+  },
+  data() {
+    return {
+      blogs: [
+        {
+          id: 1,
+          title: "Marlons Blog",
+          text: "great blog",
+          hashtag: "#hamburg #2liga"
+        },
+        {
+          id: 2,
+          title: "Stefans Blog",
+          text: "awesome blog",
+          hashtag: "#bielefeld #1liga"
+        }
+      ]
+    }
   }
 }
 </script>
