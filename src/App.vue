@@ -46,12 +46,23 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --big-border: 6px solid black;
+  --sml-border: 2px solid black;
+  --red-color: #eb4034;
+  --active: #36d97a;
+  --blue: #2980b9;
+  --font-main: #404040;
+  --main-grey: #dedede;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
 }
 </style>
