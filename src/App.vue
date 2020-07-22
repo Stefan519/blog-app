@@ -4,49 +4,49 @@
       <Header />
     </div>
     <div>
-      <BlogList v-bind:blogs="blogs"/>
+      <BlogList v-bind:blogs="blogs" />
     </div>
     <div>
-      <Sidebar v-bind:blogs="blogs"/>
+      <Sidebar v-bind:blogs="blogs" />
     </div>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import BlogList from './components/BlogList'
-import Sidebar from './components/Sidebar'
+import Header from "./components/Header";
+import BlogList from "./components/BlogList";
+import Sidebar from "./components/Sidebar";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
     BlogList,
-    Sidebar
+    Sidebar,
   },
   data() {
     return {
       blogs: [
         {
           id: 1,
-          title: "Marlons Blog",
+          title: "Marlons Blog - New",
           text: "great blog",
-          hashtag: "#hamburg #2liga"
+          hashtag: "#hamburg #2liga",
         },
         {
           id: 2,
           title: "Stefans Blog",
           text: "awesome blog",
-          hashtag: "#bielefeld #1liga"
-        }
-      ]
-    }
-  }
-}
+          hashtag: "#bielefeld #1liga",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
 :root {
   --big-border: 6px solid black;
@@ -63,6 +63,6 @@ export default {
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 </style>
